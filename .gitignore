@@ -1,2 +1,6 @@
 # Mysqlのデータに関する内容なので不要
-mysql/data/
+mysql/data/*
+
+# PHPログは不要
+php/logs/
+php/logs/*.log
