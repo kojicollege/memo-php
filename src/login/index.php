@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php
-include_once "../common/header.php";
-echo getHeader("ログイン");
 session_start();
+
+include_once "../common/header.php";
+require '../common/auth.php';
+
+if(isLogin()) {
+    header('Location: ../memo/');
+    exit;
+}
+echo getHeader("ログイン");
+
 ?>
 
 <body>

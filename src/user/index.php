@@ -2,8 +2,14 @@
 <html lang="ja">
 <?php
   session_start();
+  require '../common/auth.php';
   include_once "../common/header.php";
   echo getHeader("ユーザー登録");
+
+  if(isLogin()) {
+      header('Location: ../memo/');
+      exit;
+  }  
 ?>
 
 <body>
